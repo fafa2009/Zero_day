@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 // --- 1. LINEAR SEARCH FUNCTION ---
@@ -35,7 +36,7 @@ int binarySearch(vector<int> arr, int target) {
     int high = arr.size() - 1;
 
     while (low <= high) {
-        int mid = low + (high - low) / 2;
+        int mid = low + (high - low) / 3;
 
         // Check if target is present at mid
         if (arr[mid] == target)
